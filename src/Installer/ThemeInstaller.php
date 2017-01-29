@@ -63,7 +63,7 @@ class ThemeInstaller extends LibraryInstaller
 
         $scripts = $composer->getPackage()->getScripts();
 
-        $postAutoloadDump = 'Nova\Composer\Installer\ModuleInstaller::postAutoloadDump';
+        $postAutoloadDump = 'Nova\Composer\Installer\ThemeInstaller::postAutoloadDump';
 
         if (! isset($scripts['post-autoload-dump']) || ! in_array($postAutoloadDump, $scripts['post-autoload-dump'])) {
             $this->warnUser(
@@ -126,7 +126,7 @@ class ThemeInstaller extends LibraryInstaller
 
         $themesDir = dirname($vendorDir) .DIRECTORY_SEPARATOR .'themes';
 
-        $themes = static::determineModules($packages, $themesDir, $vendorDir);
+        $themes = static::determineThemes($packages, $themesDir, $vendorDir);
 
         $configFile = static::getConfigFile($vendorDir);
 
@@ -144,7 +144,7 @@ class ThemeInstaller extends LibraryInstaller
      * @param string $vendorDir the path to the vendor dir
      * @return array plugin-name indexed paths to themes
      */
-    public static function determineModules($packages, $themesDir = 'themes', $vendorDir = 'vendor')
+    public static function determineThemes($packages, $themesDir = 'themes', $vendorDir = 'vendor')
     {
         $themes = array();
 
