@@ -1,6 +1,6 @@
 {
-    "name": "nova-framework/module-installer",
-    "description": "A composer installer for Nova 4.x modules.",
+    "name": "nova-framework/theme-installer",
+    "description": "A composer installer for Nova 4.x themes.",
     "type": "composer-installer",
     "license": "MIT",
     "authors": [
@@ -20,7 +20,7 @@
         }
     },
     "extra": {
-        "class": "Nova\\Composer\\Installer\\ModuleInstaller"
+        "class": "Nova\\Composer\\Installer\\ThemeInstaller"
     },
     "minimum-stability": "dev"
 }
