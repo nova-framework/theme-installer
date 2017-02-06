@@ -221,7 +221,7 @@ class ThemeInstaller extends LibraryInstaller
 return array(
     'themes' => array(
 $data
-    )
+    ),
 );
 
 PHP;
@@ -232,7 +232,7 @@ PHP;
 $baseDir = dirname(dirname(__FILE__));
 
 return array(
-    'themes' => array()
+    'themes' => array(),
 );
 PHP;
         }
@@ -246,7 +246,7 @@ PHP;
         // Normalize to *nix paths.
         $root = str_replace('\\', '/', $root);
 
-        $contents = str_replace('\'' . $root, '$baseDir . \'', $contents);
+        $contents = str_replace('\'' .$root, '$baseDir .\'', $contents);
 
         file_put_contents($configFile, $contents);
     }
@@ -476,7 +476,7 @@ PHP;
 $baseDir = dirname(dirname(__FILE__));
 
 return array(
-    'themes' => array()
+    'themes' => array(),
 );
 PHP;
         if (! is_dir(dirname($path))) {
@@ -516,7 +516,7 @@ PHP;
 return array(
     'themes' => array(
 $data
-    )
+    ),
 );
 
 PHP;
@@ -534,7 +534,7 @@ PHP;
 
         $root = str_replace('\\', '/', $root);
 
-        $contents = str_replace('\'' . $root, '$baseDir . \'', $contents);
+        $contents = str_replace('\'' .$root, '$baseDir .\'', $contents);
 
         file_put_contents($path, $contents);
     }
