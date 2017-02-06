@@ -220,7 +220,7 @@ class ThemeInstaller extends LibraryInstaller
 
 return array(
     'themes' => array(
-$data
+$data,
     ),
 );
 
