@@ -170,7 +170,9 @@ class ThemeInstaller extends LibraryInstaller
 
                 $name = $info->getFilename();
 
-                $themes[$name] = $themesDir . DIRECTORY_SEPARATOR . $name;
+                $namespace = 'Themes\\' .$name;
+
+                $themes[$namespace] = $themesDir . DIRECTORY_SEPARATOR . $name;
             }
         }
 
